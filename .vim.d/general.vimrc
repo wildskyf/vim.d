@@ -47,7 +47,7 @@ set wrap						" new line when too many char
 " fold
 set foldmethod=syntax
 set foldlevel=1 " 預設全部關閉
-set foldnestmax=3
+set foldnestmax=1
 
 
 " Tab
