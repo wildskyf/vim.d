@@ -29,9 +29,9 @@ let g:lightline = {
     \             [ 'filename' ],
     \             [ 'bufferline' ]
     \           ],
-    \   'right': [ [ 'lineinfo' ],
+    \   'right': [ [ 'time' ],
     \              [ 'percent' ],
-    \              [ 'fileformat', 'fileencoding', 'filetype' ]
+    \              [ 'lineinfo', 'filetype' ]
     \           ],
 	\ },
     \ 'tabline': {
@@ -40,6 +40,7 @@ let g:lightline = {
     \ },
 	\ 'component': {
 	\   'bufferline': '%{bufferline#refresh_status()}%{g:bufferline_status_info.before . g:bufferline_status_info.current . g:bufferline_status_info.after}',
+	\   'time': "%5(%{strftime('%H:%M')}%)"
 	\ }
 \ }
 
