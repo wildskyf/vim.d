@@ -13,4 +13,4 @@ source $HOME/.vim.d/general.vimrc
 source $HOME/.vim.d/autorun.vimrc
 source $HOME/.vim.d/keys.vimrc
 
-colorscheme monokai
+silent! colorscheme monokai
