@@ -12,7 +12,7 @@ echo 'Cleaned.'
 # .vimrc & vundle
 echo 'Start to download vim configure files.'
 wget --quiet https://raw.githubusercontent.com/wildskyf/vim.d/master/.vimrc
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone --quiet https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # .vim.d
 mkdir ~/.vim.d
