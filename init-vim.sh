@@ -11,24 +11,24 @@ echo 'Cleaned.'
 
 # .vimrc & vundle
 echo 'Start to download vim configure files.'
-wget https://raw.githubusercontent.com/wildskyf/vim.d/master/.vimrc
+wget --quiet https://raw.githubusercontent.com/wildskyf/vim.d/master/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # .vim.d
 mkdir ~/.vim.d
 cd ~/.vim.d
-wget https://raw.githubusercontent.com/wildskyf/vim.d/master/.vim.d/autorun.vimrc
-wget https://raw.githubusercontent.com/wildskyf/vim.d/master/.vim.d/general.vimrc
-wget https://raw.githubusercontent.com/wildskyf/vim.d/master/.vim.d/keys.vimrc
-wget https://raw.githubusercontent.com/wildskyf/vim.d/master/.vim.d/packages.vimrc
-wget https://raw.githubusercontent.com/wildskyf/vim.d/master/.vim.d/packages_config.vimrc
+wget --quiet https://raw.githubusercontent.com/wildskyf/vim.d/master/.vim.d/autorun.vimrc
+wget --quiet https://raw.githubusercontent.com/wildskyf/vim.d/master/.vim.d/general.vimrc
+wget --quiet https://raw.githubusercontent.com/wildskyf/vim.d/master/.vim.d/keys.vimrc
+wget --quiet https://raw.githubusercontent.com/wildskyf/vim.d/master/.vim.d/packages.vimrc
+wget --quiet https://raw.githubusercontent.com/wildskyf/vim.d/master/.vim.d/packages_config.vimrc
 echo 'Downloaded.'
 
 echo 'Start to install vim packages.'
 vim -c 'PluginInstall' -c 'qa!'
 echo 'Installed.'
 
-
+echo ''
 echo '========================================================================'
 echo 'Finished. You might need to install or compile some dependency packages.'
 echo '========================================================================'
