@@ -5,9 +5,10 @@
 " original
 "    F2           : save session
 "    F3           : load session
-"    F9           : switch paste mode
+"    F8           : toggle tagbar
 "    F10          : switch number on & off
 "    F12          : switch number re & abs
+
 " leader (<SPACE>)
 "    p f          : ctrlP
 "    <tab>        : next buffer
@@ -16,20 +17,26 @@ let mapleader = "\<Space>"
 let g:ctrlp_map = '<leader>pf'
 
 nmap ZZ :x<cr>
+vmap '' :w !pbcopy<CR><CR>
 noremap  <TAB> >>
 noremap  <S-TAB> <<
 noremap  <Home> ^
-noremap  <F2> :mksession! ~/.vim_session <CR>
-noremap  <F3> :source ~/.vim_session <CR>
-nnoremap <leader><Tab> :bnext<CR>
-nnoremap <leader><S-Tab> :bprevious<CR>
 nnoremap ; :
+nnoremap <leader><Tab>   :bnext<CR>
+nnoremap <leader><S-Tab> :bprevious<CR>
+nnoremap <leader>tt      :TagbarToggle<CR>
+nnoremap <F2>  :mksession! ~/.vim_session <CR>
+nnoremap <F3>  :source ~/.vim_session <CR>
 nnoremap <F10> :call NumberToggle()<CR>
 nnoremap <F12> :call NumberToggleRe()<CR>
 nnoremap j gj
 nnoremap k gk
 nnoremap <UP> gk
+nnoremap <C-k>  5gk
+nnoremap <C-UP> 5gk
 nnoremap <DOWN> gj
+nnoremap <C-j>  5gj
+nnoremap <C-DOWN> 5gj
 inoremap <Home> <ESC>^i
 
 :set pastetoggle=<F9>
