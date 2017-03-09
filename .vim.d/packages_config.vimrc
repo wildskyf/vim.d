@@ -2,7 +2,16 @@
 " ========== package config ==============
 " ========================================
 
+
+" STABLE ==================
+
+" ctag x tagbar
+let g:tagbar_width = 55
+let g:tagbar_autofocus = 1
+
 " CtrlP
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+
 let g:ctrlp_user_command = {
 	\ 'types': {
 		\ 1: ['.git', 'cd %s && git ls-files --exclude-standard --others --cached'],
@@ -25,21 +34,17 @@ let g:lightline = {
 	\ 'separator': { 'left': '', 'right': '' },
 	\ 'subseparator': { 'left': '', 'right': '' },
 	\ 'active': {
-	\   'left': [ [ 'mode', 'paste' ],
-    \             [ 'filename' ],
-    \             [ 'bufferline' ]
-    \           ],
-    \   'right': [ [ 'time' ],
-    \              [ 'percent' ],
-    \              [ 'lineinfo', 'filetype' ]
-    \           ],
+	\   'left' : [ ['mode', 'paste'] ],
+	\   'right': [ [ 'time' ],
+	\              [ 'percent' ],
+	\              [ 'lineinfo', 'filetype' ]
+	\           ],
 	\ },
-    \ 'tabline': {
-    \   'left': [ [ 'tabs' ] ],
+	\ 'tabline': {
+	\   'left': [ [ 'tabs' ] ],
 	\   'right': [ [] ]
-    \ },
+	\ },
 	\ 'component': {
-	\   'bufferline': '%{bufferline#refresh_status()}%{g:bufferline_status_info.before . g:bufferline_status_info.current . g:bufferline_status_info.after}',
 	\   'time': "%5(%{strftime('%H:%M')}%)"
 	\ }
 \ }
