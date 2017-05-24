@@ -10,8 +10,8 @@ set backspace=indent,eol,start    " allow backspacing over everything in insert 
 set background=dark
 set colorcolumn=80
 set confirm                       " if confict, ask me
-set cursorline                    " display current cursor (line)
-set cursorcolumn                  " display current cursor (column)
+" set cursorline                    " display current cursor (line)
+" set cursorcolumn                  " display current cursor (column)
 set display+=lastline
 set encoding=utf-8
 set fo+=mB                        " for asia text
@@ -36,7 +36,7 @@ set splitbelow
 set splitright
 set title                         " change the terminal's title
 set textwidth=78
-set t_Co=256
+" set t_Co=256
 set visualbell                    " don't beep
 set noerrorbells                  " don't beep
 set undolevels=1000               " use many muchos levels of undo
@@ -46,13 +46,6 @@ set wrap                          " new line when too many char
 
 
 let &colorcolumn="80,".join(range(100,999),",")
-
-
-" fold
-set foldmethod=syntax
-set foldlevel=1                   " 預設全部關閉
-set foldnestmax=2
-
 
 " Tab
 set autoindent
@@ -87,3 +80,17 @@ set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.so,*.swp,*.zip,*/.Trash/**,*.pdf,*.dmg,*/Library/**,*/.rbenv/**
 set wildignore+=*/.nx/**,*.app
 
+
+" set statusline=@\ %t\%r%h%w\ [%{&fileencoding},%Y]\ %m%=\ [Pos=%l,%v,%p%%]\ [LINE=%L]
+
+set laststatus=2
+set statusline=%4*%<\ %1*[%F]
+set statusline+=%4*\ %5*[%{&encoding}, " encoding
+set statusline+=%{&fileformat}%{\"\".((exists(\"+bomb\")\ &&\ &bomb)?\",BOM\":\"\").\"\"}]%m
+set statusline+=%4*%=\ %6*%y%4*\ %3*%l%4*,\ %3*%c%4*\ \<\ %2*%P%4*\ \>
+highlight User1 ctermfg=red
+highlight User2 term=underline cterm=underline ctermfg=green
+highlight User3 term=underline cterm=underline ctermfg=yellow
+highlight User4 term=underline cterm=underline ctermfg=white
+highlight User5 ctermfg=cyan
+highlight User6 ctermfg=white

@@ -5,6 +5,9 @@
 
 " STABLE ==================
 
+" matchit
+" add config in $VIMRUNTIME/ftplugin/html.vim
+
 " ctag x tagbar
 let g:tagbar_width = 55
 let g:tagbar_autofocus = 1
@@ -34,12 +37,13 @@ let g:lightline = {
 	\ 'separator': { 'left': '', 'right': '' },
 	\ 'subseparator': { 'left': '', 'right': '' },
 	\ 'active': {
-	\   'left' : [ ['mode', 'paste'] ],
+	\   'left' : [ ['mode', 'paste'], ['filename'] ],
 	\   'right': [ [ 'time' ],
 	\              [ 'percent' ],
 	\              [ 'lineinfo', 'filetype' ]
 	\           ],
 	\ },
+  \ 'filename': '%t',
 	\ 'tabline': {
 	\   'left': [ [ 'tabs' ] ],
 	\   'right': [ [] ]

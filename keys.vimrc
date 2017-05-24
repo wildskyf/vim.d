@@ -15,28 +15,31 @@
 
 let mapleader = "\<Space>"
 let g:ctrlp_map = '<leader>pf'
+let g:minimap_toggle='<F5>'
 
 nmap ZZ :x<cr>
 vmap '' :w !pbcopy<CR><CR>
-noremap  <TAB> >>
-noremap  <S-TAB> <<
 noremap  <Home> ^
 nnoremap ; :
 nnoremap <leader><Tab>   :bnext<CR>
 nnoremap <leader><S-Tab> :bprevious<CR>
 nnoremap <leader>tt      :TagbarToggle<CR>
+nnoremap <leader><up>       :5winc +<CR>
+nnoremap <leader><down>       :5winc -<CR>
+nnoremap <leader><left>       :5winc <<CR>
+nnoremap <leader><right>      :5winc ><CR>
 nnoremap <F2>  :mksession! ~/.vim_session <CR>
 nnoremap <F3>  :source ~/.vim_session <CR>
 nnoremap <F10> :call NumberToggle()<CR>
 nnoremap <F12> :call NumberToggleRe()<CR>
-nnoremap j gj
-nnoremap k gk
-nnoremap <UP> gk
-nnoremap <C-k>  5gk
-nnoremap <C-UP> 5gk
-nnoremap <DOWN> gj
-nnoremap <C-j>  5gj
-nnoremap <C-DOWN> 5gj
+map k gk
+map <UP> gk
+map <C-k>  5gk
+map <C-UP> 5gk
+map j gj
+map <DOWN> gj
+map <C-j>  5gj
+map <C-DOWN> 5gj
 inoremap <Home> <ESC>^i
 
 :set pastetoggle=<F9>
@@ -79,4 +82,20 @@ function! CopyThis()
 endfunc
 
 
+" ===========================
+" ======== TESTING ==========
+" ===========================
+
+" move line up/down
+nnoremap - :m .+1<CR>==
+nnoremap = :m .-2<CR>==
+vnoremap - :m '>+1<CR>gv=gv
+vnoremap = :m '<-2<CR>gv=gv
+
+nnoremap <S-DOWN> :m .+1<CR>==
+nnoremap <S-UP> :m .-2<CR>==
+inoremap <S-DOWN> <Esc>:m .+1<CR>==gi
+inoremap <S-UP> <Esc>:m .-2<CR>==gi
+vnoremap <S-DOWN> :m '>+1<CR>gv=gv
+vnoremap <S-UP> :m '<-2<CR>gv=gv
 

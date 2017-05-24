@@ -6,6 +6,9 @@
 
 " stable ==========
 
+" syntax highlight setup
+au BufNewFile,BufRead *.hbs* set filetype=mustache
+
 " limit char number for git commit
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
@@ -13,10 +16,10 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 autocmd BufWritePre * StripWhitespace
 "
 " auto toggle LineNumber between absolute or relative
-autocmd FocusLost   * :call SetNumber()
-autocmd FocusGained * :call SetRelativeNumber()
-autocmd InsertEnter * :call SetNumber()
-autocmd InsertLeave * :call SetRelativeNumber()
+" autocmd FocusLost   * :call SetNumber()
+" autocmd FocusGained * :call SetRelativeNumber()
+" autocmd InsertEnter * :call SetNumber()
+" autocmd InsertLeave * :call SetRelativeNumber()
 
 " restore the position last I open the file
 if has("autocmd")
