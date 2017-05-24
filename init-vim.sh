@@ -12,20 +12,19 @@ echo 'Cleaned.'
 # .vimrc & vundle
 echo 'Start to download vim configure files.'
 wget --quiet https://raw.githubusercontent.com/wildskyf/vim.d/master/.vimrc
-git clone --quiet https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-# .vim.d
-mkdir ~/.vim.d
+# junegunn/vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# .vimrc & .vim.d
+git clone git@github.com:wildskyf/vim.d.git .vim.d
+ln .vim.d/.vimrc ./.vimrc
 cd ~/.vim.d
-wget --quiet https://raw.githubusercontent.com/wildskyf/vim.d/master/.vim.d/autorun.vimrc
-wget --quiet https://raw.githubusercontent.com/wildskyf/vim.d/master/.vim.d/general.vimrc
-wget --quiet https://raw.githubusercontent.com/wildskyf/vim.d/master/.vim.d/keys.vimrc
-wget --quiet https://raw.githubusercontent.com/wildskyf/vim.d/master/.vim.d/packages.vimrc
-wget --quiet https://raw.githubusercontent.com/wildskyf/vim.d/master/.vim.d/packages_config.vimrc
 echo 'Downloaded.'
 
 echo 'Start to install vim packages.'
-vim -c 'PluginInstall' -c 'qa!'
+vim -c 'PlugInstall' -c 'qa!'
 echo 'Installed.'
 
 echo ''
