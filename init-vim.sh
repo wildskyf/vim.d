@@ -9,17 +9,13 @@ rm -rf ~/.vim
 rm -rf ~/.vim.d
 echo 'Cleaned.'
 
-# .vimrc & vundle
-echo 'Start to download vim configure files.'
-wget --quiet https://raw.githubusercontent.com/wildskyf/vim.d/master/.vimrc
-
 # junegunn/vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # .vimrc & .vim.d
-git clone git@github.com:wildskyf/vim.d.git .vim.d
-ln .vim.d/.vimrc ./.vimrc
+git clone https://github.com/wildskyf/vim.d ~/.vim.d
+ln ~/.vim.d/.vimrc ~/.vimrc
 cd ~/.vim.d
 echo 'Downloaded.'
 
