@@ -18,7 +18,13 @@ let g:ctrlp_map = '<leader>pf'
 let g:minimap_toggle='<F5>'
 
 nmap ZZ :x<cr>
-vmap '' :w !pbcopy<CR><CR>
+
+if has('macunix') " for MAC:
+  vmap '' :w !pbcopy<CR><CR>
+elseif has('unix') " for Linux
+  vmap '' :w !xclip -i -sel c<CR><CR>
+endif
+
 noremap  <Home> ^
 nnoremap ; :
 nnoremap <leader><Tab>   :bnext<CR>
