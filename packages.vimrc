@@ -21,11 +21,12 @@ Plug 'itchyny/lightline.vim'            " Statusbar beautify
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'mattn/emmet-vim'                  " Web developer must have
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'mxw/vim-jsx'
 Plug 'ntpeters/vim-better-whitespace'   " Get rid of redundant whitespace
 Plug 'pangloss/vim-javascript'          " Js lib
-Plug 'mxw/vim-jsx'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-rails'
+Plug 'vim-scripts/matchit.zip'
 " Plug 'tpope/vim-markdown'
 Plug 'kshenoy/vim-signature'            " bookmark sign
 Plug 'kchmck/vim-coffee-script'
@@ -48,6 +49,8 @@ Plug 'w0ng/vim-hybrid'
 " archive
 " Plug 'wellsjo/wellsokai.vim'          " Theme
 
-Plug 'vim-scripts/matchit.zip'
+Plug 'fatih/vim-go'
+Plug 'w0rp/ale'
+
 
 call plug#end()
