@@ -6,6 +6,7 @@
 "    F2           : save session
 "    F3           : load session
 "    F8           : toggle tagbar
+"    F9           : Run Go Program
 "    F10          : switch number on & off
 "    F12          : switch number re & abs
 
@@ -36,6 +37,7 @@ nnoremap <leader><left>       :5winc <<CR>
 nnoremap <leader><right>      :5winc ><CR>
 nnoremap <F2>  :mksession! ~/.vim_session <CR>
 nnoremap <F3>  :source ~/.vim_session <CR>
+nnoremap <F9> :GoRun<CR>
 nnoremap <F10> :call NumberToggle()<CR>
 nnoremap <F12> :call NumberToggleRe()<CR>
 map k gk
