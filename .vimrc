@@ -1,7 +1,7 @@
 " Author: Wildsky / wildskyf+gh (at) gmail.com
 " Blog: http://blog.wildsky.cc
 " Filename: .vimrc
-" Modified: 2017-03-09
+" Modified: 2017-11-08
 
 "	Tips:
 "		Use command-line-window with q:
