@@ -8,6 +8,19 @@
 " matchit
 " add config in $VIMRUNTIME/ftplugin/html.vim
 
+let g:javascript_conceal_function             = "ƒ"
+let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_this                 = "@"
+let g:javascript_conceal_return               = "⇚"
+let g:javascript_conceal_undefined            = "¿"
+let g:javascript_conceal_NaN                  = "ℕ"
+let g:javascript_conceal_prototype            = "¶"
+let g:javascript_conceal_static               = "•"
+let g:javascript_conceal_super                = "Ω"
+let g:javascript_conceal_arrow_function       = "⇒"
+set conceallevel=1
+
+
 " ctag x tagbar
 let g:tagbar_width = 55
 let g:tagbar_autofocus = 1
