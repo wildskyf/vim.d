@@ -56,14 +56,38 @@ endif
 
 
 " fcitx integrate
-let g:input_toggle = 1
-function! Fcitx2en()
-   let s:input_status = system("fcitx-remote")
-   if s:input_status == 2
-      let g:input_toggle = 1
-      let l:a = system("fcitx-remote -c")
-   endif
-endfunction
+" let g:input_toggle = 1
+" function! Fcitx2en()
+"    let s:input_status = system("fcitx-remote")
+"    if s:input_status == 2
+"       let g:input_toggle = 1
+"       let l:a = system("fcitx-remote -c")
+"    endif
+" endfunction
 
 set timeoutlen=150
-autocmd InsertLeave * call Fcitx2en()
+" autocmd InsertLeave * call Fcitx2en()
+
+
+" auto save session
+fu! SaveSess()
+    execute ':mksession! ~/.vim_auto_session.vim'
+endfunction
+
+fu! RestoreSess()
+execute 'so ~/.vim_auto_session.vim'
+if bufexists(1)
+    for l in range(1, bufnr('$'))
+        if bufwinnr(l) == -1
+            exec 'sbuffer ' . l
+        endif
+    endfor
+endif
+endfunction
+
+autocmd VimLeave * call SaveSess()
+" autocmd VimEnter * call RestoreSess()
+
+
+
+
