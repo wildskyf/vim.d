@@ -36,8 +36,9 @@ nnoremap <leader><up>       :5winc +<CR>
 nnoremap <leader><down>       :5winc -<CR>
 nnoremap <leader><left>       :5winc <<CR>
 nnoremap <leader><right>      :5winc ><CR>
-nnoremap <F2>  :mksession! ~/.vim_manual_session.vim <CR>
-nnoremap <F3>  :source ~/.vim_manual_session.vim <CR>
+nnoremap <F2> :mksession! ~/.vim_manual_session.vim <CR>
+nnoremap <F3> :source ~/.vim_manual_session.vim <CR>
+nnoremap <F4> :call RestoreSess() <CR>
 nnoremap <F9> :CargoRun<CR>
 nnoremap <F10> :call NumberToggle()<CR>
 nnoremap <F12> :call NumberToggleRe()<CR>

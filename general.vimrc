@@ -15,6 +15,7 @@ set confirm                       " if confict, ask me
 set display+=lastline
 set encoding=utf-8
 set fo+=mB                        " for asia text
+" set listchars=eol:¶,trail:~,extends:⫸,precedes:⫷,nbsp:␣ " tab:▸
 set hlsearch                      " hightlight search result
 set history=999                   " number of history of command
 set hidden                        " make buffer could hold a modified file
@@ -24,6 +25,10 @@ set laststatus=2                  " open status bar
 set linebreak                     " don't split a vocabulary
 " set mouse=a                     " enable the mouse
 set number                        " display line number
+set nofoldenable
+" set foldenable              " can slow Vim down with some plugins
+" set foldlevelstart=99       " can slow Vim down with some plugins
+" set foldmethod=syntax       " can slow Vim down with some plugins
 set ruler                         " right-bottom detail
 set scrolloff=2                   " scroll with extra line
 set showcmd                       " Show the current command at the bottom
@@ -58,6 +63,7 @@ set tabstop=2                     " The width of a TAB is set to 4.
                                   " Still it is a \t. It is just that
                                   " Vim will interpret it to be having
                                   " a width of 4.
+
 
 set wildignore=*.o,*.obj,*~,*.pyc
 set wildignore+=.env
@@ -94,3 +100,4 @@ highlight User3 term=underline cterm=underline ctermfg=yellow
 highlight User4 term=underline cterm=underline ctermfg=white
 highlight User5 ctermfg=cyan
 highlight User6 ctermfg=white
+
