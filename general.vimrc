@@ -15,6 +15,7 @@ set confirm                       " if confict, ask me
 set display+=lastline
 set encoding=utf-8
 set fo+=mB                        " for asia text
+set regexpengine=1
 " set listchars=eol:¶,trail:~,extends:⫸,precedes:⫷,nbsp:␣ " tab:▸
 set hlsearch                      " hightlight search result
 set history=999                   " number of history of command
@@ -101,3 +102,9 @@ highlight User4 term=underline cterm=underline ctermfg=white
 highlight User5 ctermfg=cyan
 highlight User6 ctermfg=white
 
+
+set ttyfast
+set lazyredraw
+set norelativenumber
+set noballooneval
+let g:netrw_nobeval = 1
