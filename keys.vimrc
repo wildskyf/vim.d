@@ -42,15 +42,18 @@ nnoremap <F4> :call RestoreSess() <CR>
 nnoremap <F9> :CargoRun<CR>
 nnoremap <F10> :call NumberToggle()<CR>
 nnoremap <F12> :call NumberToggleRe()<CR>
-map k gk
-map <UP> gk
-map <C-k>  5gk
-map <C-UP> 5gk
-map j gj
-map <DOWN> gj
-map <C-j>  5gj
-map <C-DOWN> 5gj
 inoremap <Home> <ESC>^i
+
+map k gk
+map j gj
+map <UP> gk
+map <DOWN> gj
+
+" move cursor faster
+map <C-k>  5gk
+map <C-j>  5gj
+map <C-UP> 5gk
+map <C-DOWN> 5gj
 
 :set pastetoggle=<F9>
 
