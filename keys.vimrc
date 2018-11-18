@@ -35,6 +35,7 @@ nnoremap <leader><up>       :5winc +<CR>
 nnoremap <leader><down>       :5winc -<CR>
 nnoremap <leader><left>       :5winc <<CR>
 nnoremap <leader><right>      :5winc ><CR>
+nnoremap <leader>r            :Rg<space>
 nnoremap <F2> :mksession! ~/.vim_manual_session.vim <CR>
 nnoremap <F3> :source ~/.vim_manual_session.vim <CR>
 nnoremap <F4> :call RestoreSess() <CR>
