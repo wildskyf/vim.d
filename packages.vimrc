@@ -3,61 +3,50 @@
 " ========================================
 
 set nocompatible
-filetype off			" required!
+filetype off
 
 call plug#begin('~/.vim/plug_dir')
 
-
-Plug 'bling/vim-bufferline'             " Buffer list on statusbar
-
-Plug 'ctrlpvim/ctrlp.vim'               " Fuzzy search
-Plug 'FelikZ/ctrlp-py-matcher'          " ctrlP matcher
-Plug 'editorconfig/editorconfig-vim'    " Editorconfig is awesome
+" libs
 Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'ntpeters/vim-better-whitespace'   " Get rid of redundant whitespace
 Plug 'tomtom/tlib_vim'
-Plug 'vim-scripts/matchit.zip'
-Plug 'kshenoy/vim-signature'            " bookmark sign
 
-Plug 'jremmen/vim-ripgrep'
+" syntax
+Plug 'mustache/vim-mustache-handlebars', {'for': 'mustache'}
+Plug 'pangloss/vim-javascript'              " Js lib
+Plug 'mxw/vim-jsx', {'for': ['js', 'jsx'] }
+" Plug 'posva/vim-vue'
+" Plug 'rust-lang/rust.vim', {'for': 'rust'}
+" Plug 'timonv/vim-cargo', {'for': 'rust'}
+" Plug 'fatih/vim-go'
 
-Plug 'ap/vim-css-color'
+" setting enhancement/auto run
+Plug 'editorconfig/editorconfig-vim'        " Editorconfig is awesome
+Plug 'ntpeters/vim-better-whitespace'       " Get rid of redundant whitespace
+Plug 'andymass/vim-matchup'                 " match enhancement for html
+Plug 'kshenoy/vim-signature'                " bookmark sign
+Plug 'ap/vim-css-color', {'for': 'css'}
 " Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}
 " Plug 'shmargum/vim-sass-colors', {'for': ['css', 'scss'] }
 
-Plug 'mattn/emmet-vim'                  " Web developer must have
-
-Plug 'mustache/vim-mustache-handlebars', {'for': 'mustache'}
-" Plug 'mxw/vim-jsx'
-
-Plug 'pangloss/vim-javascript'          " Js lib
-
-" Plug 'tpope/vim-markdown'
+" tool
+Plug 'ctrlpvim/ctrlp.vim'                   " Fuzzy search
+Plug 'FelikZ/ctrlp-py-matcher'              " ctrlP matcher
+Plug 'jremmen/vim-ripgrep'
+Plug 'mattn/emmet-vim'                      " Web developer must have
 
 " Theme
 Plug 'w0ng/vim-hybrid'
+" Plug 'wellsjo/wellsokai.vim'
+" Plug 'tomasr/molokai'
+" Plug 'jacoborus/tender.vim'
 
-" Stil In Test
-" Plug 'severin-lemaignan/vim-minimap'
-" Plug 'jiangmiao/auto-pairs'
 
-" Plug 'ternjs/tern_for_vim'
-" Plug 'majutsushi/tagbar'
+" archived
+" =============================
 
-" surround
-
-" archive
-Plug 'nikvdp/ejs-syntax'
-" Plug 'briancollins/vim-jst'           " for jst, ejs
-" Plug 'wellsjo/wellsokai.vim'          " Theme
-" Plug 'sickill/vim-monokai'
-" Plug 'dracula/vim'
-
-Plug 'rust-lang/rust.vim', {'for': 'rust'}
-Plug 'timonv/vim-cargo', {'for': 'rust'}
-
-" Plug 'fatih/vim-go'
+" Plug 'nikvdp/ejs-syntax', {'for': 'ejs'}
+" Plug 'briancollins/vim-jst'               " for jst, ejs
 " Plug 'w0rp/ale'
-
 
 call plug#end()
