@@ -25,6 +25,7 @@ Plug 'editorconfig/editorconfig-vim'        " Editorconfig is awesome
 Plug 'ntpeters/vim-better-whitespace'       " Get rid of redundant whitespace
 Plug 'andymass/vim-matchup'                 " match enhancement for html
 Plug 'kshenoy/vim-signature'                " bookmark sign
+Plug 'thiagoalessio/rainbow_levels.vim'     " adjust background according to level
 Plug 'ap/vim-css-color', {'for': 'css'}
 " Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}
 " Plug 'shmargum/vim-sass-colors', {'for': ['css', 'scss'] }
@@ -40,6 +41,9 @@ Plug 'w0ng/vim-hybrid'
 " Plug 'wellsjo/wellsokai.vim'
 " Plug 'tomasr/molokai'
 " Plug 'jacoborus/tender.vim'
+
+" testing
+" =============================
 
 
 " archived

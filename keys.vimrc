@@ -20,6 +20,7 @@ let g:minimap_toggle='<F5>'
 let g:user_emmet_leader_key='<C-m>'
 
 nmap ZZ :x<cr>
+map <leader>t :RainbowLevelsToggle<cr>
 
 " if has('macunix') " for MAC:
 vmap '' :w !pbcopy<CR><CR>
