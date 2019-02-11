@@ -4,5 +4,5 @@ my vimrc files
 ## Installation
 
 ```
-curl -o- https://cdn.rawgit.com/wildskyf/vim.d/master/init-vim.sh | bash
+curl -o- https://cdn.jsdelivr.net/gh/wildskyf/vim.d/init-vim.sh | bash
 ```
