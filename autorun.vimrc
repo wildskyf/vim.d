@@ -70,24 +70,6 @@ set timeoutlen=150
 
 
 " auto save session
-fu! SaveSess()
-    execute ':mksession! ~/.vim_auto_session.vim'
-endfunction
-
-fu! RestoreSess()
-execute 'so ~/.vim_auto_session.vim'
-if bufexists(1)
-    for l in range(1, bufnr('$'))
-        if bufwinnr(l) == -1
-            exec 'sbuffer ' . l
-        endif
-    endfor
-endif
-endfunction
-
-autocmd VimLeave * call SaveSess()
-" autocmd VimEnter * call RestoreSess()
-
-
-
+autocmd VimLeave * mksession! ~/.vim_auto_session.vim
+" autocmd VimEnter * source ~/.vim_auto_session.vim
 
