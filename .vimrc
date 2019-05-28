@@ -1,7 +1,7 @@
 " Author: Wildsky / wildskyf+gh (at) gmail.com
 " Blog: http://blog.wildsky.cc
 " Filename: .vimrc
-" Modified: 2017-11-08
+" Modified: 2019-05-28
 
 "	Tips:
 "		Use command-line-window with q:
@@ -12,7 +12,7 @@ source $HOME/.vim.d/packages_config.vimrc
 source $HOME/.vim.d/general.vimrc
 source $HOME/.vim.d/autorun.vimrc
 source $HOME/.vim.d/keys.vimrc
-source $HOME/.vim.d/test_script.vimrc
+" source $HOME/.vim.d/test_script.vimrc
 
 set background=dark
 colorscheme hybrid
