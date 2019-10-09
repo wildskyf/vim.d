@@ -2,12 +2,7 @@
 " ============== auto run ================
 " ========================================
 
-" au BufRead,BufNewFile *.ejs setf javascript.jsx
-
 " stable ==========
-
-" syntax highlight setup
-au BufNewFile,BufRead *.hbs* set filetype=mustache
 
 " limit char number for git commit
 autocmd Filetype gitcommit setlocal spell textwidth=72
@@ -50,10 +45,6 @@ function! XTermPasteBegin()
 endfunction
 
 
-
-
-
-
 " fcitx integrate
 " let g:input_toggle = 1
 " function! Fcitx2en()
@@ -71,4 +62,3 @@ set timeoutlen=150
 " auto save session
 autocmd VimLeave * mksession! ~/.vim_auto_session.vim
 " autocmd VimEnter * source ~/.vim_auto_session.vim
-
