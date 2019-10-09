@@ -38,21 +38,20 @@ endif
 autocmd InsertEnter * set cursorline
 autocmd InsertLeave * set nocursorline
 
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
 
-" auto switch paste mode
-if &term =~ "xterm.*"
-	let &t_ti = &t_ti . "\e[?2004h"
-	let &t_te = "\e[?2004l" . &t_te
-	function XTermPasteBegin(ret)
-		set pastetoggle=<Esc>[201~
-		set paste
-		return a:ret
-	endfunction
-	map <expr> <Esc>[200~ XTermPasteBegin("i")
-	imap <expr> <Esc>[200~ XTermPasteBegin("")
-	cmap <Esc>[200~ <nop>
-	cmap <Esc>[201~ <nop>
-endif
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
+
+
+
+
 
 
 " fcitx integrate

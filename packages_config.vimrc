@@ -30,3 +30,7 @@ highlight RainbowLevel5 ctermbg=241 guibg=#3a3a3a
 highlight RainbowLevel6 ctermbg=243 guibg=#444444
 highlight RainbowLevel7 ctermbg=245 guibg=#4e4e4e
 highlight RainbowLevel8 ctermbg=247 guibg=#585858
+
+let b:beancount_root = '~/.accounting/main.bean'
+autocmd FileType beancount inoremap . .<C-O>:AlignCommodity<CR>
+autocmd FileType beancount inoremap <Tab> <c-x><c-o>

@@ -53,4 +53,7 @@ Plug 'w0ng/vim-hybrid'
 " Plug 'briancollins/vim-jst'               " for jst, ejs
 " Plug 'w0rp/ale'
 
+
+Plug 'nathangrigg/vim-beancount'
+
 call plug#end()
