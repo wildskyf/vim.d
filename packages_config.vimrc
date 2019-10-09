@@ -31,6 +31,23 @@ highlight RainbowLevel6 ctermbg=243 guibg=#444444
 highlight RainbowLevel7 ctermbg=245 guibg=#4e4e4e
 highlight RainbowLevel8 ctermbg=247 guibg=#585858
 
+" Beancount
 let b:beancount_root = '~/.accounting/main.bean'
 autocmd FileType beancount inoremap . .<C-O>:AlignCommodity<CR>
 autocmd FileType beancount inoremap <Tab> <c-x><c-o>
+
+" Ale
+" keep the sign gutter open
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚡'
+
+" show infos in status line
+let g:airline#extensions#ale#enabled = 1
+
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
+let g:ale_fixers = {'javascript': ['standard']}
+" let g:ale_lint_on_save = 1
+" let g:ale_fix_on_save = 1

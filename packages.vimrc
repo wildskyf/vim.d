@@ -28,6 +28,8 @@ Plug 'FelikZ/ctrlp-py-matcher'              " ctrlP matcher
 Plug 'jremmen/vim-ripgrep'
 Plug 'mattn/emmet-vim'                      " Web developer must have
 
+Plug 'dense-analysis/ale'
+
 " Theme
 Plug 'w0ng/vim-hybrid'
 " Plug 'wellsjo/wellsokai.vim'
@@ -40,5 +42,4 @@ Plug 'w0ng/vim-hybrid'
 " archived
 " =============================
 
-" Plug 'w0rp/ale'
 call plug#end()
