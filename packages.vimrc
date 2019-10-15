@@ -27,14 +27,17 @@ Plug 'ctrlpvim/ctrlp.vim'                   " Fuzzy search
 Plug 'FelikZ/ctrlp-py-matcher'              " ctrlP matcher
 Plug 'jremmen/vim-ripgrep'
 Plug 'mattn/emmet-vim'                      " Web developer must have
+Plug 'nathangrigg/vim-beancount'
 
 Plug 'dense-analysis/ale'
 
 " Theme
-Plug 'w0ng/vim-hybrid'
+Plug 'sickill/vim-monokai'
+" Plug 'w0ng/vim-hybrid'
 " Plug 'wellsjo/wellsokai.vim'
 " Plug 'tomasr/molokai'
 " Plug 'jacoborus/tender.vim'
+" Plug 'cocopon/iceberg.vim'
 
 " testing
 " =============================

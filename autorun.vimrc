@@ -4,6 +4,9 @@
 
 " stable ==========
 
+" syntax highlight setup
+au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+
 " limit char number for git commit
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
