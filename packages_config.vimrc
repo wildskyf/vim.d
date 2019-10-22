@@ -36,6 +36,9 @@ let b:beancount_root = '~/.accounting/main.bean'
 autocmd FileType beancount inoremap . .<C-O>:AlignCommodity<CR>
 autocmd FileType beancount inoremap <Tab> <c-x><c-o>
 
+" polyglot
+let g:polyglot_disabled = ['typescript']
+
 " Ale
 " keep the sign gutter open
 let g:ale_sign_column_always = 1

@@ -13,6 +13,7 @@ Plug 'tomtom/tlib_vim'
 
 " syntax
 Plug 'sheerun/vim-polyglot'
+Plug 'leafgarland/typescript-vim'
 Plug 'nathangrigg/vim-beancount'
 
 " setting enhancement/auto run
