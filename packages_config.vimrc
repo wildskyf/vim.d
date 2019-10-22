@@ -19,7 +19,7 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_working_path_mode = 'ra'
 
 " RainbowLevels
-au FileType html,tpl,python,xml,yaml :RainbowLevelsOn
+au FileType html,tpl,xml,yaml :RainbowLevelsOn
 
 hi! link RainbowLevel0 Comment
 hi! RainbowLevel1 guibg=none guifg=none
@@ -47,10 +47,11 @@ let g:ale_sign_warning = '⚡'
 
 " show infos in status line
 let g:airline#extensions#ale#enabled = 1
-
+let g:ale_completion_tsserver_autoimport = 1
 let g:ale_linters = {
-\   'javascript': ['standard'],
+\   'javascript': ['standard']
 \}
+
 let g:ale_fixers = {'javascript': ['standard']}
 " let g:ale_lint_on_save = 1
 " let g:ale_fix_on_save = 1
