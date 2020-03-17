@@ -19,7 +19,7 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_working_path_mode = 'ra'
 
 " RainbowLevels
-au FileType html,tpl,xml,yaml :RainbowLevelsOn
+" au FileType html,tpl,xml,yaml :RainbowLevelsOn
 
 hi! link RainbowLevel0 Comment
 hi! RainbowLevel1 guibg=none guifg=none
