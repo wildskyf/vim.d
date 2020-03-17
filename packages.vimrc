@@ -12,7 +12,8 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 
 " syntax
-Plug 'sheerun/vim-polyglot'
+Plug 'mxw/vim-jsx'
+Plug 'othree/yajs.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'nathangrigg/vim-beancount'
 
