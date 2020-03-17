@@ -37,6 +37,7 @@ nnoremap <leader><down>       :5winc -<CR>
 nnoremap <leader><left>       :5winc <<CR>
 nnoremap <leader><right>      :5winc ><CR>
 nnoremap <leader>r            :Rg<space>
+nnoremap <leader>f            :r! echo %<CR>
 nnoremap <F2> :mksession! ~/.vim_manual_session.vim <CR>
 nnoremap <F3> :source ~/.vim_manual_session.vim <CR>
 nnoremap <F4> :source ~/.vim_auto_session.vim <CR>
@@ -111,4 +112,3 @@ inoremap <S-DOWN> <Esc>:m .+1<CR>==gi
 inoremap <S-UP> <Esc>:m .-2<CR>==gi
 vnoremap <S-DOWN> :m '>+1<CR>gv=gv
 vnoremap <S-UP> :m '<-2<CR>gv=gv
-
