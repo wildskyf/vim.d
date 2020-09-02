@@ -12,10 +12,12 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 
 " syntax
-Plug 'mxw/vim-jsx'
-Plug 'othree/yajs.vim'
+" Plug 'othree/yajs.vim'
+Plug 'yuezk/vim-js'
 Plug 'leafgarland/typescript-vim'
-Plug 'nathangrigg/vim-beancount'
+Plug 'maxmellon/vim-jsx-pretty'
+
+" Plug 'nathangrigg/vim-beancount'
 
 " setting enhancement/auto run
 Plug 'editorconfig/editorconfig-vim'        " Editorconfig is awesome
@@ -34,8 +36,8 @@ Plug 'nathangrigg/vim-beancount'
 Plug 'dense-analysis/ale'
 
 " Theme
-Plug 'sickill/vim-monokai'
-" Plug 'w0ng/vim-hybrid'
+" Plug 'sickill/vim-monokai'
+Plug 'w0ng/vim-hybrid'
 " Plug 'wellsjo/wellsokai.vim'
 " Plug 'tomasr/molokai'
 " Plug 'jacoborus/tender.vim'

@@ -6,13 +6,14 @@
 
 " syntax highlight setup
 au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
-au BufNewFile,BufRead *.tpl set filetype=html
+
+" au BufNewFile,BufRead *.tpl set filetype=html
 
 " limit char number for git commit
-autocmd Filetype gitcommit setlocal spell textwidth=72
+au Filetype gitcommit setlocal spell textwidth=72
 
 " redundant whitespace bye bye
-autocmd BufWritePre * StripWhitespace
+au BufWritePre * StripWhitespace
 "
 " auto toggle LineNumber between absolute or relative
 " autocmd FocusLost   * :call SetNumber()
