@@ -12,12 +12,14 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 
 " syntax
-" Plug 'othree/yajs.vim'
+Plug 'othree/yajs.vim'
 Plug 'yuezk/vim-js'
 Plug 'leafgarland/typescript-vim'
-Plug 'maxmellon/vim-jsx-pretty'
-
+Plug 'peitalin/vim-jsx-typescript'
 " Plug 'nathangrigg/vim-beancount'
+
+" for Typescript
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " setting enhancement/auto run
 Plug 'editorconfig/editorconfig-vim'        " Editorconfig is awesome
@@ -31,17 +33,15 @@ Plug 'ctrlpvim/ctrlp.vim'                   " Fuzzy search
 Plug 'FelikZ/ctrlp-py-matcher'              " ctrlP matcher
 Plug 'jremmen/vim-ripgrep'
 Plug 'mattn/emmet-vim'                      " Web developer must have
-Plug 'nathangrigg/vim-beancount'
-
-Plug 'dense-analysis/ale'
 
 " Theme
 " Plug 'sickill/vim-monokai'
-Plug 'w0ng/vim-hybrid'
-" Plug 'wellsjo/wellsokai.vim'
+" Plug 'w0ng/vim-hybrid'
 " Plug 'tomasr/molokai'
 " Plug 'jacoborus/tender.vim'
 " Plug 'cocopon/iceberg.vim'
+" Plug 'wellsjo/wellsokai.vim'
+Plug 'chuling/ci_dark'
 
 " testing
 " =============================

@@ -6,6 +6,7 @@
 
 " syntax highlight setup
 au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+au BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 
 " au BufNewFile,BufRead *.tpl set filetype=html
 

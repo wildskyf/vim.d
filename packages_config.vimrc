@@ -22,7 +22,7 @@ let g:ctrlp_working_path_mode = 'ra'
 " au FileType html,tpl,xml,yaml :RainbowLevelsOn
 
 hi! link RainbowLevel0 Comment
-hi! RainbowLevel1 guibg=none guifg=none
+"hi! RainbowLevel1 guibg=none guifg=none
 hi! link RainbowLevel2 Normal
 hi! link RainbowLevel3 Identifier
 hi! link RainbowLevel4 Function
@@ -56,6 +56,9 @@ let g:user_emmet_settings = {
 \    'quote_char': "'",
 \  },
 \}
+let g:user_emmet_mode='a'    "enable all function in all mode.
 
 let g:vim_jsx_pretty_template_tags = ['html', 'jsx', 'typescript']
 let g:vim_jsx_pretty_colorful_config = 1
+
+let g:coc_global_extensions = ['coc-tsserver']

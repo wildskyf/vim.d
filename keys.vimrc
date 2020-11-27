@@ -38,6 +38,7 @@ nnoremap <leader><left>       :5winc <<CR>
 nnoremap <leader><right>      :5winc ><CR>
 nnoremap <leader>r            :Rg<space>
 nnoremap <leader>f            :r! echo %<CR>
+nnoremap <leader>c            :Ic<CR>
 nnoremap <F2> :mksession! ~/.vim_manual_session.vim <CR>
 nnoremap <F3> :source ~/.vim_manual_session.vim <CR>
 nnoremap <F4> :source ~/.vim_auto_session.vim <CR>
