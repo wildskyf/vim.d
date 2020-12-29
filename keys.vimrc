@@ -17,7 +17,7 @@
 let mapleader = "\<Space>"
 " let g:ctrlp_map = '<leader>pf'
 let g:minimap_toggle='<F5>'
-let g:user_emmet_leader_key='<C-m>'
+let g:user_emmet_leader_key='<c-m>'
 
 nmap ZZ :x<cr>
 map <leader>t :RainbowLevelsToggle<cr>
@@ -37,7 +37,8 @@ nnoremap <leader><down>       :5winc -<CR>
 nnoremap <leader><left>       :5winc <<CR>
 nnoremap <leader><right>      :5winc ><CR>
 nnoremap <leader>r            :Rg<space>
-nnoremap <leader>f            :r! echo %<CR>
+nnoremap <leader>f            :CocFix<CR>
+nnoremap <leader>c            :Ic<CR>
 nnoremap <F2> :mksession! ~/.vim_manual_session.vim <CR>
 nnoremap <F3> :source ~/.vim_manual_session.vim <CR>
 nnoremap <F4> :source ~/.vim_auto_session.vim <CR>
@@ -101,10 +102,6 @@ function! CopyThis()
 endfunc
 
 
-" ===========================
-" ======== TESTING ==========
-" ===========================
-
 " move line up/down
 nnoremap <S-DOWN> :m .+1<CR>==
 nnoremap <S-UP> :m .-2<CR>==
@@ -112,3 +109,9 @@ inoremap <S-DOWN> <Esc>:m .+1<CR>==gi
 inoremap <S-UP> <Esc>:m .-2<CR>==gi
 vnoremap <S-DOWN> :m '>+1<CR>gv=gv
 vnoremap <S-UP> :m '<-2<CR>gv=gv
+
+" ===========================
+" ======== TESTING ==========
+" ===========================
+
+nmap <silent> gd <Plug>(coc-definition)

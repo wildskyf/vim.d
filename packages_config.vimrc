@@ -22,7 +22,7 @@ let g:ctrlp_working_path_mode = 'ra'
 " au FileType html,tpl,xml,yaml :RainbowLevelsOn
 
 hi! link RainbowLevel0 Comment
-hi! RainbowLevel1 guibg=none guifg=none
+"hi! RainbowLevel1 guibg=none guifg=none
 hi! link RainbowLevel2 Normal
 hi! link RainbowLevel3 Identifier
 hi! link RainbowLevel4 Function
@@ -36,20 +36,6 @@ let b:beancount_root = '~/.accounting/main.bean'
 autocmd FileType beancount inoremap . .<C-O>:AlignCommodity<CR>
 autocmd FileType beancount inoremap <Tab> <c-x><c-o>
 
-" polyglot
-" let g:polyglot_disabled = ['javascript', 'typescript']
-
-" Ale
-" keep the sign gutter open
-let g:ale_sign_column_always = 1
-let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '⚡'
-
-" show infos in status line
-let g:ale_completion_tsserver_autoimport = 1
-let g:ale_linters = { 'javascript': ['standard'], 'typescript': ['standard'] }
-let g:ale_fixers = { 'javascript': ['standard'], 'typescript': ['standardx'] }
-
 " Emmet
 let g:user_emmet_settings = {
 \  'html' : {
@@ -57,5 +43,11 @@ let g:user_emmet_settings = {
 \  },
 \}
 
-let g:vim_jsx_pretty_template_tags = ['html', 'jsx', 'typescript']
-let g:vim_jsx_pretty_colorful_config = 1
+" Coc
+let g:coc_global_extensions = ['coc-tsserver']
+let g:coc_user_config = {}
+let g:coc_user_config['coc.preferences.jumpCommand'] = 'tabe'
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif

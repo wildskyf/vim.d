@@ -2,19 +2,30 @@
 " ============== auto run ================
 " ========================================
 
+" testing =========
+
+" speedup jsx syntax
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+au BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.typescriptreact
+
 " stable ==========
 
 " syntax highlight setup
-au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+" au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+" au BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+
+au FileType scss setl iskeyword+=@-@
+
 
 " au BufNewFile,BufRead *.tpl set filetype=html
 
 " limit char number for git commit
 au Filetype gitcommit setlocal spell textwidth=72
 
-" redundant whitespace bye bye
+" remove redundant whitespace
 au BufWritePre * StripWhitespace
-"
+
 " auto toggle LineNumber between absolute or relative
 " autocmd FocusLost   * :call SetNumber()
 " autocmd FocusGained * :call SetRelativeNumber()
@@ -25,7 +36,6 @@ au BufWritePre * StripWhitespace
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
 
 " switch the shape of the cursor
 if exists('$TMUX')
@@ -49,20 +59,7 @@ function! XTermPasteBegin()
   return ""
 endfunction
 
-
-" fcitx integrate
-" let g:input_toggle = 1
-" function! Fcitx2en()
-"    let s:input_status = system("fcitx-remote")
-"    if s:input_status == 2
-"       let g:input_toggle = 1
-"       let l:a = system("fcitx-remote -c")
-"    endif
-" endfunction
-
 set timeoutlen=150
-" autocmd InsertLeave * call Fcitx2en()
-
 
 " auto save session
 autocmd VimLeave * mksession! ~/.vim_auto_session.vim

@@ -108,3 +108,8 @@ set lazyredraw
 set norelativenumber
 set noballooneval
 let g:netrw_nobeval = 1
+
+
+
+" TODO: exteact
+command Ic :normal oconsole.log(<args>)<ESC>==

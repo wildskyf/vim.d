@@ -21,6 +21,7 @@ echo 'Downloaded.'
 
 echo 'Start to install vim packages.'
 vim -c 'PlugInstall' -c 'qa!'
+vim -c 'Coc Install coc-tsserver coc-eslint' -c 'qa!'
 echo 'Installed.'
 
 echo ''
