@@ -55,10 +55,10 @@ map <DOWN> gj
 " move cursor faster
 map <C-k>  5gk
 map <C-j>  5gj
+map <C-h>  b
+map <C-l>  e
 map <C-UP> 5gk
 map <C-DOWN> 5gj
-map <C-k>  5gk
-map <C-j>  5gj
 map <C-LEFT> b
 map <C-RIGHT> e
 
