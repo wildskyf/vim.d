@@ -51,3 +51,8 @@ let g:coc_user_config['coc.preferences.jumpCommand'] = 'tabe'
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
 endif
+
+" vim-template
+let g:tmpl_search_paths = ['~/.vim.d/templates']
+let g:tmpl_auto_initialize = 1
+

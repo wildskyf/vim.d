@@ -13,6 +13,8 @@ set confirm                       " if confict, ask me
 " set cursorline                    " display current cursor (line)
 " set cursorcolumn                  " display current cursor (column)
 set display+=lastline
+set fileencodings=utf-8,big5
+set fileencoding=utf-8
 set encoding=utf-8
 set fo+=mB                        " for asia text
 set regexpengine=1
@@ -106,10 +108,22 @@ highlight User6 ctermfg=white
 set ttyfast
 set lazyredraw
 set norelativenumber
-set noballooneval
+" set noballooneval
 let g:netrw_nobeval = 1
 
 
 
 " TODO: exteact
 command Ic :normal oconsole.log(<args>)<ESC>==
+
+" Inspect $TERM instad of t_Co as it works in neovim as well
+if &term =~ '256color'
+  " Enable true (24-bit) colors instead of (8-bit) 256 colors.
+  " :h true-color
+  if has('termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+  endif
+endif
+

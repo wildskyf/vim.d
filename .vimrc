@@ -15,13 +15,14 @@ source $HOME/.vim.d/autorun.vimrc
 " source $HOME/.vim.d/test_script.vimrc
 
 set background=dark
-" colorscheme hybrid
+" colorscheme ci_dark
 " colorscheme tender
 " colorscheme molokai
 " colorscheme wellsokai
 " colorscheme iceberg
 set termguicolors
-colorscheme ci_dark
+" colorscheme hybrid
+colorscheme wellsokai
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
 

@@ -18,7 +18,7 @@ Plug 'othree/yajs.vim'
 " Plug 'yuezk/vim-js'
 " Plug 'leafgarland/typescript-vim'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " setting enhancement/auto run
 Plug 'editorconfig/editorconfig-vim'        " Editorconfig is awesome
@@ -30,8 +30,11 @@ Plug 'thiagoalessio/rainbow_levels.vim'     " adjust background according to lev
 " tool
 Plug 'ctrlpvim/ctrlp.vim'                   " Fuzzy search
 Plug 'FelikZ/ctrlp-py-matcher'              " ctrlP matcher
-Plug 'jremmen/vim-ripgrep'
+" Plug 'jremmen/vim-ripgrep'
+Plug 'miyase256/vim-ripgrep', {'branch': 'fix/remove-complete-from-RgRoot'}
 Plug 'mattn/emmet-vim'
+Plug 'mhinz/vim-startify'
+
 
 " Theme
 " Plug 'sickill/vim-monokai'
@@ -40,10 +43,18 @@ Plug 'mattn/emmet-vim'
 " Plug 'jacoborus/tender.vim'
 " Plug 'cocopon/iceberg.vim'
 " Plug 'wellsjo/wellsokai.vim'
-Plug 'chuling/ci_dark'
+" Plug 'chuling/ci_dark'
 
 " testing
 " =============================
+
+Plug 'rescript-lang/vim-rescript'
+Plug 'tpope/vim-sensible'
+" Plug 'lifepillar/vim-solarized8'
+
+" Plug 'nanotech/jellybeans.vim'
+Plug 'wellsjo/wellsokai.vim'
+Plug 'tibabit/vim-templates'
 
 " archived
 " =============================

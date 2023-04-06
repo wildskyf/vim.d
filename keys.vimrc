@@ -11,7 +11,6 @@
 "    F12          : switch number re & abs
 
 " leader (<SPACE>)
-"    p f          : ctrlP
 "    <tab>        : next buffer
 
 let mapleader = "\<Space>"

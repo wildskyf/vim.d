@@ -8,6 +8,7 @@
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 au BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.typescriptreact
+" au BufNewFile *.tsx,*.jsx r ~/.vim.d/templates/component.tsx
 
 " stable ==========
 
