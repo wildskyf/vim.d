@@ -9,12 +9,23 @@ return {
   -- ensure mason installs the server
   {
     "williamboman/mason.nvim",
+    build = ":MasonUpdate",
     opts = {
       ensure_installed = {
         "typescript-language-server",
         "prettier",
         "eslint-lsp",
       },
+      ui = {
+        border = "rounded",
+        icons = {
+          package_installed = "✓",
+          package_pending = "➜",
+          package_uninstalled = "✗"
+        }
+      },
+      log_level = vim.log.levels.INFO,
+      max_concurrent_installers = 10,
     },
   },
 
