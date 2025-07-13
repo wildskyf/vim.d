@@ -12,7 +12,6 @@ return {
     build = ":MasonUpdate",
     opts = {
       ensure_installed = {
-        "typescript-language-server",
         "prettier",
         "eslint-lsp",
       },
@@ -34,23 +33,11 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        tsserver = {
-          enabled = false,
-        },
-        vtsls = {
-          enabled = false,
-        },
         typescript_tools = {
           enabled = true,
         },
       },
       setup = {
-        tsserver = function()
-          return true
-        end,
-        vtsls = function()
-          return true
-        end,
         typescript_tools = function()
           return true
         end,
