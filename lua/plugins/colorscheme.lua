@@ -1,12 +1,13 @@
 return {
-  -- add wellsokai
-  { "wellsjo/wellsokai.vim" },
+  -- { "morhetz/gruvbox" },
+  { "tomasr/molokai" },
 
   -- Configure LazyVim to load wellsokai
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "wellsokai",
+      -- colorscheme = "gruvbox",
+      colorscheme = "molokai",
     },
   },
 }
